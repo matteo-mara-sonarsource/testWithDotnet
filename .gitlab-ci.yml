@@ -17,7 +17,7 @@ sonarqube-check:
     - "apt-get install --yes openjdk-11-jre"
     - "dotnet tool install --global dotnet-sonarscanner"
     - "export PATH=\"$PATH:$HOME/.dotnet/tools\""
-    - "dotnet sonarscanner begin /k:\"sonarsource_sonarqube_dim-integration-maven_AYj4cdj-bn3qZcbd0u3O\" /d:sonar.token=\"$SONAR_TOKEN\" /d:\"sonar.host.url=$SONAR_HOST_URL\" "
+    - "dotnet sonarscanner begin /k:\"sonarsource_sonarqube_dim-integration-dotnet_AYj8DdXTbn3qZcbd0u4s\" /d:sonar.token=\"$SONAR_TOKEN\" /d:\"sonar.host.url=$SONAR_HOST_URL\" "
     - "dotnet build"
     - "dotnet sonarscanner end /d:sonar.token=\"$SONAR_TOKEN\""
   allow_failure: true
