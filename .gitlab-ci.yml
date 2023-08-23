@@ -14,8 +14,7 @@ sonarqube-check:
       - .sonar/cache
   script:
     - "apt-get update"
-    - "apt autoremove default-jre"
-    - "apt-get install --yes openjdk-17-jre"
+    - "apt-get install --yes --no-install-recommends openjdk-17-jre"
     - "dotnet tool install --global dotnet-sonarscanner"
     - "export PATH=\"$PATH:$HOME/.dotnet/tools\""
     - "dotnet sonarscanner begin /k:\"sonarsource_sonarqube_dim-integration-dotnet_AYj8DdXTbn3qZcbd0u4s\" /d:sonar.token=\"$SONAR_TOKEN\" /d:\"sonar.host.url=$SONAR_HOST_URL\" "
